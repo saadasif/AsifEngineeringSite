@@ -53,11 +53,11 @@ body {
 
 .company-info {
   text-align: center;
-  font-size: large;
+  font-size: 16px;
 }
 .company-byline {
   text-align: center;
-  font-size: larger;
+  font-size: 18px;
 }
 
 .text-brand-pink {
