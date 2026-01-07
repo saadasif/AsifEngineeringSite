@@ -5,6 +5,24 @@
   src: url(https://rawcdn.githack.com/noirblancrouge/YoungSerif/8d0c1528f30f31e5c5aaf18d21e8e111568377d5/fonts/otf/YoungSerif-Regular.otf) format('opentype');
 }
 
+@keyframes rotate-left {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+  25% {
+    transform: rotate(-7.5deg);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: rotate(7.5deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 body {
   background-color: #EFE7DC;
   margin: 0;
@@ -29,6 +47,7 @@ body {
 .logo {
   width: 200px;
   height: 200px;
+  animation: rotate-left 7s infinite;
 }
 
 .company-info {
