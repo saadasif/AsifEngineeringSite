@@ -55,13 +55,18 @@ body {
   animation: rotate-left 7s infinite;
 }
 
+.company-byline {
+  text-align: center;
+  font-size: 18px;
+}
+
 .company-info {
   text-align: center;
   font-size: 16px;
 }
-.company-byline {
-  text-align: center;
-  font-size: 18px;
+
+.restrict-width {
+  width: clamp(250px, 85vw, 600px);
 }
 
 .text-brand-pink {
