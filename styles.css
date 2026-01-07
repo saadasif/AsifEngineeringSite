@@ -39,8 +39,8 @@ body {
 
 .container {
   display: grid;
-  place-items: center; /* centers both horizontally and vertically */
-  height: 100dvh; /* limits viewport height */
+  place-items: center;
+  height: 100dvh;
   gap: 1rem;
 }
 
