@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Young Serif';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://rawcdn.githack.com/noirblancrouge/YoungSerif/8d0c1528f30f31e5c5aaf18d21e8e111568377d5/fonts/otf/YoungSerif-Regular.otf) format('opentype');
+}
+
+body {
+  background-color: #EFE7DC;
+  margin: 0;
+  padding: 0;
+  font-family: "Young Serif", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container {
+  display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+  height: 100vh; /* Example: Centers within the full viewport height */
+  gap: 1rem;
+}
+
+.content {
+  display: grid;
+  justify-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.company-info {
+  text-align: center;
+  font-size: large;
+}
+.company-byline {
+  text-align: center;
+  font-size: larger;
+}
+
+.text-brand-pink {
+  color: #D0433E;
+}
