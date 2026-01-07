@@ -1,14 +1,15 @@
 @font-face {
-  font-family: 'Young Serif';
+  font-family: "Young Serif";
   font-style: normal;
   font-weight: 300;
-  src: url(https://rawcdn.githack.com/noirblancrouge/YoungSerif/8d0c1528f30f31e5c5aaf18d21e8e111568377d5/fonts/otf/YoungSerif-Regular.otf) format('opentype');
+  src: url(https://rawcdn.githack.com/noirblancrouge/YoungSerif/8d0c1528f30f31e5c5aaf18d21e8e111568377d5/fonts/otf/YoungSerif-Regular.otf)
+    format("opentype");
 }
 
 @keyframes rotate-left {
   0% {
     transform: rotate(0deg);
-    animation-timing-function: linear;
+    animation-timing-function: ease-out;
   }
   25% {
     transform: rotate(-7.5deg);
@@ -16,7 +17,7 @@
   }
   75% {
     transform: rotate(7.5deg);
-    animation-timing-function: linear;
+    animation-timing-function: ease-in;
   }
   100% {
     transform: rotate(0deg);
@@ -24,7 +25,7 @@
 }
 
 body {
-  background-color: #EFE7DC;
+  background-color: #efe7dc;
   margin: 0;
   padding: 0;
   font-family: "Young Serif", serif;
@@ -60,5 +61,5 @@ body {
 }
 
 .text-brand-pink {
-  color: #D0433E;
+  color: #d0433e;
 }
