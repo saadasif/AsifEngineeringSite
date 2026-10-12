@@ -1,0 +1,806 @@
+.cover-bikepacking .cover-art,
+.cover-field .cover-art,
+.cover-nicethat .cover-art,
+.cover-simple .cover-art,
+.cover-newmountain .cover-art {
+  align-items: flex-start;
+}
+
+.cover-simple h3,
+.cover-folklife h3,
+.cover-craft h3,
+.cover-sun h3,
+.cover-maine h3 {
+  font-size: min(var(--cover-serif-title-size, 44px), var(--cover-title-limit, 100cqw));
+}
+
+.cover-folklife h3,
+.cover-craft h3,
+.cover-sun h3,
+.cover-maine h3 {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: 300;
+}
+
+.cover-simple h3 {
+  font-family: var(--reading-handmade);
+  font-weight: 700;
+}
+
+.cover-emergence h3,
+.cover-orion h3,
+.cover-flow h3 {
+  font-family: var(--reading-literary);
+  font-weight: 400;
+}
+
+.cover-radavist {
+  --cover-stock: #30392e;
+  --cover-ink: #dce1ad;
+}
+
+.cover-radavist h3 {
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  transform: rotate(-5deg);
+}
+
+.cover-radavist .cover-eyebrow {
+  padding-left: 8px;
+}
+
+.cover-orbit {
+  position: absolute;
+  width: min(176px, 65cqw);
+  height: min(80px, 50%);
+  border: 1px solid #788160;
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+
+.cover-bikepacking {
+  --cover-stock: #ba7958;
+  --cover-ink: #211f19;
+}
+
+.cover-bikepacking h3 {
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 0.91;
+}
+
+.cover-bikepacking h3 > span,
+.cover-field h3 > span,
+.cover-sidetracked h3 > span,
+.cover-folklife h3 > span,
+.cover-newmountain h3 > span,
+.cover-nicethat h3 > span {
+  display: block;
+}
+
+.cover-domain {
+  display: block;
+  font-family: var(--reading-mono);
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.cover-route {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  width: min(74px, 30cqw);
+  height: min(128px, 75%);
+  border: 1px dashed #67472f;
+  border-left: 0;
+  border-radius: 0 60% 45% 0;
+  transform: translateY(-50%) rotate(18deg);
+}
+
+.cover-field {
+  --cover-stock: #a8b5ac;
+  --cover-ink: #233b32;
+}
+
+.cover-field h3 {
+  font-size: 68px;
+  font-weight: 500;
+  line-height: 0.82;
+}
+
+.cover-window {
+  position: absolute;
+  right: 8px;
+  width: min(94px, 35cqw);
+  height: min(138px, 100%);
+  border: 1px solid #597566;
+  border-radius: 60px 60px 0 0;
+}
+
+.cover-window::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #597566;
+  border-radius: inherit;
+}
+
+.cover-speedlines {
+  position: absolute;
+  width: 100%;
+  height: min(110px, 70%);
+  border-block: 3px double #8f7063;
+  transform: skewY(-7deg);
+}
+
+.cover-nicethat {
+  --cover-stock: #b0adbf;
+  --cover-ink: #373044;
+}
+
+.cover-nicethat h3 {
+  width: 100%;
+  font-size: 50px;
+  line-height: 0.97;
+  font-weight: 600;
+}
+
+.cover-nicethat h3 > span:first-child {
+  font-family: var(--reading-literary);
+  font-size: 82px;
+  font-style: italic;
+  line-height: 0.85;
+  margin-bottom: 6px;
+}
+
+.cover-spark {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0.65em;
+  vertical-align: top;
+}
+
+.cover-sidetracked {
+  --cover-stock: #35434a;
+  --cover-ink: #d7ddd9;
+}
+
+.cover-sidetracked h3 {
+  font-size: 43px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.035em;
+  text-align: center;
+}
+
+.cover-mountain {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  height: min(100px, 65%);
+  aspect-ratio: 1;
+  border-top: 1px solid #7b8c92;
+  border-left: 1px solid #7b8c92;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.cover-simple {
+  --cover-stock: #bcb39a;
+  --cover-ink: #3b3b25;
+}
+
+.cover-simple h3 {
+  line-height: 1.02;
+}
+
+.cover-flower {
+  position: absolute;
+  right: -58px;
+  bottom: 0;
+  color: #9b593b;
+  font-size: 60px;
+}
+
+.cover-folklife {
+  --cover-stock: #8a9a5b;
+  --cover-ink: #202819;
+}
+
+.cover-folklife h3 {
+  --cover-serif-title-size: 60px;
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: 0.015em;
+  text-align: center;
+}
+
+.cover-folklife .cover-smallprint {
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+.cover-beside {
+  --cover-stock: var(--reading-sage);
+  --cover-ink: #203225;
+}
+
+.cover-beside h3 {
+  font-size: min(59px, 25cqw);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+}
+
+.cover-horizon {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  height: min(30px, 25%);
+  border-top: 1px solid #4f6649;
+  border-bottom: 1px solid #4f6649;
+  border-radius: 50%;
+  transform: rotate(-5deg);
+}
+
+.cover-emergence {
+  --cover-stock: #263b34;
+  --cover-ink: #cbd3b9;
+}
+
+.cover-emergence h3 {
+  font-size: min(53px, 21cqw);
+  letter-spacing: -0.025em;
+}
+
+.cover-rings {
+  position: absolute;
+  width: auto;
+  height: min(154px, 100%);
+  aspect-ratio: 1;
+  border: 1px solid #587365;
+  border-radius: 49% 51% 45% 55%;
+}
+
+.cover-rings::before,
+.cover-rings::after {
+  content: "";
+  position: absolute;
+  inset: 9%;
+  border: 1px solid #587365;
+  border-radius: 44% 56% 48% 52%;
+  transform: rotate(25deg);
+}
+
+.cover-rings::after {
+  inset: 19%;
+  transform: rotate(-20deg);
+}
+
+.cover-craft {
+  --cover-stock: #ac8770;
+  --cover-ink: #2a211a;
+}
+
+.cover-craft h3 {
+  --cover-title-limit: 36px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.cover-craft .cover-smallprint {
+  font-size: 11px;
+  letter-spacing: 0.025em;
+}
+
+.cover-orion {
+  --cover-stock: #34394a;
+  --cover-ink: #d4d4e0;
+}
+
+.cover-orion .cover-art {
+  --cover-orion-title-size: 91px;
+}
+
+.cover-orion h3 {
+  font-size: var(--cover-orion-title-size);
+  letter-spacing: -0.045em;
+}
+
+.cover-stars {
+  position: absolute;
+  top: max(0px, calc(50% - var(--cover-orion-title-size) * 0.475 - min(32px, 12cqw) - 4px));
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1;
+  color: #b7bbce;
+  font-size: min(24px, 10cqw);
+}
+
+.cover-stars span {
+  font-size: min(32px, 12cqw);
+}
+
+.cover-sun {
+  --cover-stock: #49352b;
+  --cover-ink: #f0debd;
+  padding-block: clamp(8px, 2.5vw, 24px);
+}
+
+.cover-sun h3 {
+  --cover-serif-title-size: 70px;
+  text-align: center;
+}
+
+.cover-sun .cover-eyebrow {
+  margin-bottom: 0;
+}
+
+.cover-disc {
+  position: absolute;
+  width: auto;
+  height: min(165px, 100%);
+  aspect-ratio: 1;
+  background: #944a2a;
+  border-radius: 50%;
+}
+
+.cover-flow {
+  --cover-stock: #81979d;
+  --cover-ink: #152d35;
+}
+
+.cover-flow h3 {
+  font-size: 66px;
+  font-style: italic;
+}
+
+.cover-flow .cover-eyebrow {
+  font-style: normal;
+  text-align: center;
+}
+
+.cover-waves {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: min(170px, 75cqw);
+  height: 14px;
+  margin-top: 5px;
+  transform: translateX(-50%);
+  fill: none;
+  stroke: #4a737f;
+  stroke-width: 1;
+}
+
+.cover-newmountain {
+  --cover-stock: #a0a477;
+  --cover-ink: #25311c;
+}
+
+.cover-newmountain h3 {
+  font-family: var(--reading-bold);
+  font-size: min(34px, 12cqw);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.cover-newmountain h3 > span {
+  transform: rotate(-6deg);
+}
+
+.cover-newmountain .cover-spark {
+  color: #6d512b;
+  font-size: 0.9em;
+}
+
+.cover-maine {
+  --cover-stock: #333f2c;
+  --cover-ink: #d9d5b8;
+}
+
+.cover-maine h3 {
+  --cover-title-limit: 14.5cqw;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+.cover-maine .cover-eyebrow {
+  margin-bottom: 9px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+}
+
+.cover-maine .cover-ampersand {
+  color: #b8c68e;
+  font-family: var(--reading-literary);
+  font-style: italic;
+}
+
+
+.cover-goodgoodgood {
+  --cover-stock: #dfc56e;
+  --cover-ink: #383521;
+}
+
+.cover-goodgoodgood h3,
+.cover-bikeexif h3 {
+  font-family: var(--reading-bold);
+  font-weight: 700;
+}
+
+.cover-goodgoodgood h3 {
+  font-size: min(60px, 25cqw);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  text-align: center;
+}
+
+.cover-goodgoodgood h3 > span {
+  display: block;
+  width: max-content;
+  font-size: 0.5em;
+  letter-spacing: -0.04em;
+}
+
+.cover-wornwound {
+  --cover-stock: #c1c2b9;
+  --cover-ink: #29312c;
+}
+
+.cover-wornwound h3 {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: min(46px, 21cqw);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  text-align: center;
+}
+
+.cover-wornwound h3 > span {
+  display: block;
+  font-size: 0.72em;
+}
+
+.cover-wornwound .cover-ampersand {
+  font-family: var(--reading-mono);
+  font-size: 0.7em;
+  font-style: normal;
+}
+
+.cover-dial {
+  position: absolute;
+  height: min(152px, 100%);
+  aspect-ratio: 1;
+  border: 1px solid #838d82;
+  border-radius: 50%;
+}
+
+.cover-dial::before,
+.cover-dial::after {
+  content: "";
+  position: absolute;
+  inset: 9% 49%;
+  border-block: 3px solid #838d82;
+}
+
+.cover-dial::after {
+  transform: rotate(90deg);
+}
+
+.cover-bikeexif {
+  --cover-stock: #392e2c;
+  --cover-ink: #e4b39b;
+}
+
+.cover-bikeexif h3 {
+  font-size: min(58px, 23.5cqw);
+  font-style: italic;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  transform: skewY(-5deg);
+}
+
+.cover-bikeexif h3 > span {
+  display: block;
+  margin-bottom: 5px;
+  font-family: var(--reading-mono);
+  font-size: 0.32em;
+  font-style: normal;
+  letter-spacing: 0.3em;
+}
+
+.cover-ridgeline {
+  --cover-stock: #bfc3ab;
+  --cover-ink: #30382b;
+}
+
+.cover-ridgeline h3 {
+  font-family: var(--reading-literary);
+  font-size: min(65px, 28cqw);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.cover-ridge {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: min(18px, 6.5cqw);
+  margin-top: 3px;
+  fill: none;
+  stroke: #7d896c;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cover-publicdomain {
+  --cover-stock: #c1b4ca;
+  --cover-ink: #403247;
+}
+
+.cover-publicdomain h3,
+.cover-ronsbikes h3 {
+  font-family: var(--reading-handmade);
+  font-weight: 700;
+}
+
+.cover-publicdomain h3 {
+  font-size: min(34px, 12cqw);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-align: center;
+}
+
+.cover-publicdomain h3 > span:last-child {
+  display: block;
+  font-size: 1.65em;
+}
+
+.cover-archive {
+  position: absolute;
+  inset: 5% 4%;
+  border-inline: 1px solid #887494;
+  border-radius: 50% 50% 0 0;
+}
+
+.cover-ronsbikes {
+  --cover-stock: #d3c5b1;
+  --cover-ink: #7b302c;
+}
+
+.cover-ronsbikes h3 {
+  font-size: min(60px, 24cqw);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.cover-ronsbikes h3 > span {
+  display: block;
+  font-family: var(--reading-mono);
+  font-size: 0.45em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+}
+
+.cover-chain {
+  width: 0.85em;
+  height: 0.55em;
+  vertical-align: middle;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  transform: rotate(-18deg);
+}
+
+@container (max-width: 276px) {
+  .cover-art {
+    --cover-serif-title-size: 29px;
+  }
+
+  .cover-disc {
+    height: min(96px, 100%);
+  }
+
+  .cover-radavist h3 {
+    font-size: 40px;
+    transform: rotate(-3deg);
+  }
+
+  .cover-bikepacking h3 {
+    font-size: min(28px, 12cqw);
+  }
+
+  .cover-bikepacking h3 > span {
+    display: inline;
+  }
+
+  .cover-domain {
+    margin-top: 6px;
+    font-size: 12px;
+  }
+
+  .cover-field h3 {
+    font-size: 37px;
+  }
+
+  .cover-nicethat h3 {
+    font-size: 25px;
+  }
+
+  .cover-nicethat h3 > span:first-child {
+    margin-bottom: 3px;
+    font-size: 40px;
+  }
+
+  .cover-sidetracked h3 {
+    font-size: 29px;
+  }
+
+  .cover-flower {
+    right: -42px;
+    font-size: 36px;
+  }
+
+  .cover-folklife h3 {
+    --cover-serif-title-size: 36px;
+  }
+
+  .cover-orion .cover-art {
+    --cover-orion-title-size: 62px;
+  }
+
+  .cover-sun h3 {
+    --cover-serif-title-size: 48px;
+  }
+
+  .cover-flow h3 {
+    font-size: 42px;
+  }
+
+  .cover-maine h3 {
+    line-height: 1;
+  }
+
+  .cover-maine h3 br {
+    display: none;
+  }
+
+  .cover-maine .cover-eyebrow {
+    margin-bottom: 4px;
+    font-size: 8px;
+  }
+}
+
+@container (max-width: 200px) {
+  .cover-publicdomain h3 {
+    font-size: 11cqw;
+  }
+
+  .cover-waves {
+    height: 8px;
+    margin-top: 3px;
+  }
+
+  .cover-art {
+    --cover-serif-title-size: min(27px, 18cqw);
+  }
+
+  .cover-disc {
+    height: min(90px, 100%);
+  }
+
+  .cover-simple .cover-eyebrow {
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  .cover-craft .cover-smallprint {
+    display: none;
+  }
+
+  .cover-radavist h3 {
+    font-size: min(34px, 22cqw);
+  }
+
+  .cover-domain {
+    margin-top: 3px;
+    font-size: 10px;
+  }
+
+  .cover-field h3 {
+    font-size: min(32px, 24cqw);
+  }
+
+  .cover-nicethat h3 {
+    font-size: min(22px, 17cqw);
+  }
+
+  .cover-nicethat h3 > span:first-child {
+    font-size: 28px;
+  }
+
+  .cover-sidetracked h3 {
+    font-size: min(25px, 18cqw);
+  }
+
+  .cover-simple h3 {
+    line-height: 1;
+  }
+
+  .cover-flower {
+    right: -30px;
+    font-size: min(32px, 20cqw);
+  }
+
+  .cover-folklife h3 {
+    --cover-serif-title-size: min(30px, 23cqw);
+  }
+
+  .cover-orion .cover-art {
+    --cover-orion-title-size: min(52px, 38cqw);
+  }
+
+  .cover-sun h3 {
+    --cover-serif-title-size: min(44px, 32cqw);
+  }
+
+  .cover-flow h3 {
+    font-size: min(36px, 22cqw);
+  }
+}
+
+@container (max-width: 128px) {
+  .cover-waves {
+    height: 6px;
+    margin-top: 2px;
+  }
+
+  .cover-art {
+    --cover-serif-title-size: 18cqw;
+  }
+
+  .cover-field h3 {
+    font-size: 21cqw;
+  }
+
+  .cover-eyebrow {
+    margin-bottom: 2px;
+    font-size: 8px;
+    line-height: 1.25;
+  }
+
+  .cover-nicethat h3 > span:first-child {
+    font-size: 23px;
+  }
+
+  .cover-sidetracked h3 {
+    font-size: 17cqw;
+  }
+
+  .cover-simple h3 {
+    --cover-serif-title-size: 14cqw;
+  }
+
+  .cover-folklife h3 {
+    --cover-serif-title-size: 19cqw;
+  }
+
+  .cover-sun h3 {
+    --cover-serif-title-size: 26cqw;
+  }
+
+  .cover-maine h3 {
+    --cover-title-limit: 13.7cqw;
+  }
+}
