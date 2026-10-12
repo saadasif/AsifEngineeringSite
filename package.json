@@ -1,0 +1,10 @@
+{
+  "name": "asif-engineering-site",
+  "private": true,
+  "scripts": {
+    "previews": "node scripts/generate-previews.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.0"
+  }
+}
