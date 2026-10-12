@@ -1,0 +1,15 @@
+# Allow search crawlers to read page-level indexing instructions.
+# The personal readme opts out of indexing using its noindex meta tag.
+User-agent: *
+Allow: /
+
+# Opt out of OpenAI and Anthropic training crawlers.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# Opt out of Gemini training and grounding; Google Search is unaffected.
+User-agent: Google-Extended
+Disallow: /

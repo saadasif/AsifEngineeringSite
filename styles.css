@@ -87,55 +87,86 @@ body {
   padding: 2rem 1rem 4rem;
 }
 
+.home-page .content {
+  width: min(100%, 550px);
+  gap: 24px;
+}
+
+.home-page .company-byline,
+.home-page .company-info {
+  margin: 0;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
+.home-page .restrict-width {
+  width: 100%;
+}
+
+.company-connections {
+  display: grid;
+  gap: 8px;
+}
+
+.company-connections .company-info {
+  font-size: 14px;
+}
+
 .home-navigation {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 1rem;
   padding: clamp(1rem, 3vw, 2rem);
 }
 
-.reading-room-link {
+.home-navigation-strip {
   display: flex;
+  background: #121212;
+  border: 1px solid #30372f;
+}
+
+.home-navigation a {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
   min-height: 44px;
   box-sizing: border-box;
-  padding: 0.5rem 0.75rem;
-  background: #1a1a1a;
+  padding: 0 0.65rem;
   color: #efe7dc;
-  border: 1px solid #30372f;
-  border-radius: 2px;
+  font-family: Georgia, serif;
+  font-size: 0.8125rem;
   text-decoration: none;
-  box-shadow: 2px 2px 0 #8c9f82;
-  transition: background-color 160ms ease, box-shadow 160ms ease;
+  text-underline-offset: 5px;
 }
 
-.reading-room-link-mark,
-.reading-room-link-arrow {
-  color: #8c9f82;
-  font-size: 1rem;
+.home-navigation a + a {
+  border-left: 1px solid #30372f;
 }
 
-.reading-room-link-mark {
+.home-navigation-mark {
   color: #d0433e;
 }
 
-.reading-room-link-title {
-  display: block;
-  font-family: Georgia, serif;
-  font-size: 0.9375rem;
-  line-height: 1.15;
-}
-
-.reading-room-link-title em {
+.home-navigation em,
+.home-navigation-arrow {
   color: #8c9f82;
 }
 
-.reading-room-link:hover {
-  background: #20271f;
-  box-shadow: 3px 3px 0 #8c9f82;
+.home-navigation-arrow {
+  margin-left: 0.15rem;
 }
 
-.reading-room-link:focus-visible {
+.home-navigation a:hover {
+  background: #20271f;
+}
+
+.home-navigation a:hover em {
+  text-decoration: underline;
+}
+
+.home-navigation a:focus-visible {
   outline: 3px solid #d0433e;
   outline-offset: 6px;
 }
@@ -145,13 +176,16 @@ body {
     justify-content: center;
   }
 
+  .home-navigation a {
+    padding-inline: 0.55rem;
+    font-size: 0.8125rem;
+  }
+
+  .home-navigation-arrow {
+    display: none;
+  }
+
   .home-page .company-info {
     max-width: 100%;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reading-room-link {
-    transition: none;
   }
 }
