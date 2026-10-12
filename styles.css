@@ -30,6 +30,7 @@ html {
 
 body {
   background-color: #efe7dc;
+  color: #1a1a1a;
   margin: 0;
   padding: 0;
   font-family: "Young Serif", serif;
@@ -71,4 +72,86 @@ body {
 
 .text-brand-pink {
   color: #d0433e;
+}
+
+.home-page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100dvh;
+}
+
+.home-page .container {
+  box-sizing: border-box;
+  height: auto;
+  min-width: 0;
+  padding: 2rem 1rem 4rem;
+}
+
+.home-navigation {
+  display: flex;
+  justify-content: flex-end;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.reading-room-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  background: #1a1a1a;
+  color: #efe7dc;
+  border: 1px solid #30372f;
+  border-radius: 2px;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 #8c9f82;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.reading-room-link-mark,
+.reading-room-link-arrow {
+  color: #8c9f82;
+  font-size: 1rem;
+}
+
+.reading-room-link-mark {
+  color: #d0433e;
+}
+
+.reading-room-link-title {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 0.9375rem;
+  line-height: 1.15;
+}
+
+.reading-room-link-title em {
+  color: #8c9f82;
+}
+
+.reading-room-link:hover {
+  background: #20271f;
+  box-shadow: 3px 3px 0 #8c9f82;
+}
+
+.reading-room-link:focus-visible {
+  outline: 3px solid #d0433e;
+  outline-offset: 6px;
+}
+
+@media (max-width: 480px) {
+  .home-navigation {
+    justify-content: center;
+  }
+
+  .home-page .company-info {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-room-link {
+    transition: none;
+  }
 }
