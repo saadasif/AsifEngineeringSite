@@ -282,7 +282,7 @@
   aspect-ratio: 1;
   padding: 24px;
   border: 1px solid rgba(234, 228, 215, 0.08);
-  border-radius: 24%;
+  border-radius: 28%;
   outline: 1px solid transparent;
   outline-offset: 3px;
   background: var(--cover-stock);
