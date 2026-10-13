@@ -256,6 +256,14 @@
   .reading-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .cover-meta {
+    display: none;
+  }
+
+  .reading-cover {
+    grid-template-rows: minmax(0, 1fr) 54px;
+  }
 }
 
 @media (pointer: coarse) and (hover: none) and (min-width: 1024px) and (max-width: 1200px) and (orientation: landscape) {
@@ -298,11 +306,6 @@
     gap: 12px;
   }
 
-  .cover-meta {
-    font-size: 8px;
-    line-height: 1;
-  }
-
   .cover-bottom {
     gap: 0;
     padding-top: 6px;
@@ -318,16 +321,12 @@
   }
 
   .reading-cover {
-    grid-template-rows: auto minmax(0, 1fr) 58px;
+    grid-template-rows: minmax(0, 1fr) 58px;
     padding: clamp(10px, 3vw, 20px);
   }
 }
 
 @media (max-width: 374px) {
-  .cover-meta {
-    display: none;
-  }
-
   .reading-cover {
     grid-template-rows: minmax(0, 1fr) 60px;
   }
