@@ -24,18 +24,11 @@
   }
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background-color: #efe7dc;
+.home-page {
+  background-color: var(--color-paper);
   color: #1a1a1a;
-  margin: 0;
-  padding: 0;
   font-family: "Young Serif", serif;
   font-weight: 300;
-  font-style: normal;
 }
 
 .container {
@@ -71,7 +64,7 @@ body {
 }
 
 .text-brand-pink {
-  color: #d0433e;
+  color: var(--color-clay);
 }
 
 .home-page {
@@ -123,8 +116,8 @@ body {
 
 .home-navigation-strip {
   display: flex;
-  background: #121212;
-  border: 1px solid #30372f;
+  background: var(--color-charcoal);
+  border: 1px solid var(--color-rule);
 }
 
 .home-navigation a {
@@ -134,7 +127,7 @@ body {
   min-height: 44px;
   box-sizing: border-box;
   padding: 0 0.65rem;
-  color: #efe7dc;
+  color: var(--color-paper);
   font-family: Georgia, serif;
   font-size: 0.8125rem;
   text-decoration: none;
@@ -142,16 +135,16 @@ body {
 }
 
 .home-navigation a + a {
-  border-left: 1px solid #30372f;
+  border-left: 1px solid var(--color-rule);
 }
 
 .home-navigation-mark {
-  color: #d0433e;
+  color: var(--color-clay);
 }
 
 .home-navigation em,
 .home-navigation-arrow {
-  color: #8c9f82;
+  color: var(--color-sage);
 }
 
 .home-navigation-arrow {
@@ -167,7 +160,7 @@ body {
 }
 
 .home-navigation a:focus-visible {
-  outline: 3px solid #d0433e;
+  outline: 3px solid var(--color-clay);
   outline-offset: 6px;
 }
 

@@ -175,7 +175,7 @@
 }
 
 .cover-beside {
-  --cover-stock: var(--reading-sage);
+  --cover-stock: var(--color-sage);
   --cover-ink: #203225;
 }
 

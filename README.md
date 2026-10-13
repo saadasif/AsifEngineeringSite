@@ -1,5 +1,13 @@
 site for my personal projects. made in pure vanilla HTML/CSS (and maybe TS one day) for the ❤️ of the craft.
 
+## Styles
+
+`shared.css` contains the site-wide palette and page reset, plus the readme and
+Reading Room’s common fonts, page chrome, and numbered section labels. Page
+layouts stay in `readme.css` and `reading.css`; publication artwork stays in
+`reading-covers.css`. Homepage typography, layout, and animation stay in
+`styles.css`.
+
 ## Link previews
 
 Screenshots for Messages and other Open Graph link previews are generated

@@ -3,6 +3,12 @@
 Keep the site in vanilla HTML/CSS. Node and Playwright are build tools for link
 preview screenshots; the public pages should not need a JavaScript runtime.
 
+## Delivering changes
+
+Do not create pull requests for changes. Commit changes and merge directly to
+`main` when instructed to deliver them. Fetch `origin/main` before merging or
+pushing, and use a normal push without force-pushing.
+
 ## Link preview screenshots
 
 Preview generation is handled by the **Refresh link previews** workflow after

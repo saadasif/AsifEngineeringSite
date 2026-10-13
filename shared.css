@@ -1,0 +1,283 @@
+/* Site-wide palette and reset, plus shared readme and Reading Room components. */
+:root {
+  --color-charcoal: #121212;
+  --color-paper: #efe7dc;
+  --color-sage: #8c9f82;
+  --color-clay: #d0433e;
+  --color-muted: #b1b5a9;
+  --color-rule: #30372f;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmmono/v16/aFTU7PB1QTsUX8KYthqQBK6PYK0.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7Motmp5g.woff2)
+    format("woff2");
+}
+
+.reading-room {
+  --reading-display: "Bricolage Grotesque", "Arial Black", sans-serif;
+  --reading-literary: "Instrument Serif", Georgia, serif;
+  --reading-mono: "DM Mono", monospace;
+  background-color: var(--color-charcoal);
+  color: var(--color-paper);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.reading-room *,
+.reading-room *::before,
+.reading-room *::after {
+  box-sizing: border-box;
+}
+
+.reading-room ::selection {
+  background: var(--color-clay);
+  color: var(--color-charcoal);
+}
+
+.reading-room a:focus-visible {
+  outline: 3px solid var(--color-paper);
+  outline-offset: 6px;
+}
+
+.reading-container {
+  width: min(1120px, calc(100% - 96px));
+  margin-inline: auto;
+}
+
+.reading-skip {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  padding: 12px 18px;
+  background: var(--color-charcoal);
+  color: inherit;
+  transform: translateY(-150%);
+}
+
+.reading-skip:focus {
+  transform: translateY(0);
+}
+
+.reading-header {
+  padding-top: 38px;
+}
+
+.reading-topline,
+.reading-colophon,
+.reading-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.reading-topline {
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.reading-topline > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reading-asterisk {
+  color: var(--color-clay);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.reading-home-link {
+  color: var(--color-muted);
+  font-size: 12px;
+  text-decoration: none;
+  text-underline-offset: 5px;
+  white-space: nowrap;
+}
+
+.reading-home-link:hover {
+  color: var(--color-paper);
+  text-decoration: underline;
+}
+
+.reading-header h1 {
+  margin: 58px 0 18px;
+  font-family: var(--reading-literary);
+  font-size: clamp(68px, 8.3vw, 112px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.reading-header h1 em {
+  color: var(--color-sage);
+  font-weight: 400;
+}
+
+.reading-period {
+  color: var(--color-clay);
+}
+
+.reading-colophon {
+  padding-block: 16px;
+  border-block: 1px solid var(--color-rule);
+  color: var(--color-muted);
+  font-size: 11px;
+  letter-spacing: 0.025em;
+}
+
+.reading-footer {
+  margin-top: 72px;
+  padding-block: 26px 38px;
+  border-top: 1px solid var(--color-rule);
+  color: var(--color-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.reading-footer p {
+  margin: 0;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-number {
+  flex-shrink: 0;
+  padding: 7px 9px;
+  border: 1px solid var(--color-rule);
+  color: var(--color-sage);
+  font-family: var(--reading-mono);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.section-heading {
+  margin: 0;
+  font-family: var(--reading-literary);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+@media (max-width: 1000px) {
+  .reading-container {
+    width: calc(100% - 64px);
+  }
+
+  .reading-header h1 {
+    font-size: clamp(68px, 10vw, 100px);
+  }
+}
+
+@media (max-width: 640px) {
+  .reading-home-link {
+    font-size: 10px;
+  }
+
+  .reading-container {
+    width: calc(100% - 32px);
+  }
+
+  .reading-header {
+    padding-top: 24px;
+  }
+
+  .reading-topline {
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .reading-topline > span {
+    gap: 6px;
+    letter-spacing: 0.04em;
+  }
+
+  .reading-header h1 {
+    max-width: 12ch;
+    margin-top: 42px;
+    font-size: clamp(60px, 14vw, 88px);
+    line-height: 0.95;
+  }
+
+  .reading-colophon {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .reading-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .section-heading {
+    font-size: 30px;
+  }
+
+  .section-label {
+    gap: 12px;
+  }
+}
