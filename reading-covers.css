@@ -18,8 +18,7 @@
 }
 
 .cover-emergence h3,
-.cover-orion h3,
-.cover-flow h3 {
+.cover-orion h3 {
   font-family: var(--reading-literary);
   font-weight: 400;
 }
@@ -284,34 +283,6 @@
   border-radius: 50%;
 }
 
-.cover-flow {
-  --cover-stock: #81979d;
-  --cover-ink: #152d35;
-}
-
-.cover-flow h3 {
-  font-size: 66px;
-  font-style: italic;
-}
-
-.cover-flow .cover-eyebrow {
-  font-style: normal;
-  text-align: center;
-}
-
-.cover-waves {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: min(170px, 75cqw);
-  height: 14px;
-  margin-top: 5px;
-  transform: translateX(-50%);
-  fill: none;
-  stroke: #4a737f;
-  stroke-width: 1;
-}
-
 .cover-newmountain {
   --cover-stock: #a0a477;
   --cover-ink: #25311c;
@@ -352,7 +323,7 @@
 }
 
 .cover-maine .cover-ampersand {
-  color: #b8c68e;
+  color: #b7ffbe;
   font-family: var(--reading-literary);
   font-style: italic;
 }
@@ -506,6 +477,27 @@
   border-radius: 50% 50% 0 0;
 }
 
+.cover-lowtech {
+  --cover-stock: #adb9ca;
+  --cover-ink: #26334a;
+}
+
+.cover-lowtech h3 {
+  font-family: var(--reading-mono);
+  font-size: min(42px, 18cqw);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.cover-lowtech h3 > span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.5em;
+  letter-spacing: 0.02em;
+}
+
 .cover-ronsbikes {
   --cover-stock: #d3c5b1;
   --cover-ink: #7b302c;
@@ -577,10 +569,6 @@
     --cover-serif-title-size: 48px;
   }
 
-  .cover-flow h3 {
-    font-size: 42px;
-  }
-
   .cover-maine h3 {
     line-height: 1;
   }
@@ -598,11 +586,6 @@
 @container (max-width: 200px) {
   .cover-publicdomain h3 {
     font-size: 11cqw;
-  }
-
-  .cover-waves {
-    height: 8px;
-    margin-top: 3px;
   }
 
   .cover-art {
@@ -633,18 +616,9 @@
   .cover-sun h3 {
     --cover-serif-title-size: min(44px, 32cqw);
   }
-
-  .cover-flow h3 {
-    font-size: min(36px, 22cqw);
-  }
 }
 
 @container (max-width: 128px) {
-  .cover-waves {
-    height: 6px;
-    margin-top: 2px;
-  }
-
   .cover-art {
     --cover-serif-title-size: 18cqw;
   }
