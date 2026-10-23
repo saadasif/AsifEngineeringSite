@@ -2,6 +2,7 @@
   "name": "asif-engineering-site",
   "private": true,
   "scripts": {
+    "watch-images": "node scripts/prepare-watch-images.mjs",
     "previews": "node scripts/generate-previews.mjs"
   },
   "devDependencies": {

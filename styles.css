@@ -116,12 +116,14 @@
 
 .home-navigation-strip {
   display: flex;
+  flex-wrap: wrap;
   background: var(--color-charcoal);
   border: 1px solid var(--color-rule);
 }
 
 .home-navigation a {
   display: inline-flex;
+  flex-grow: 1;
   align-items: center;
   gap: 0.25rem;
   min-height: 44px;
@@ -170,8 +172,8 @@
   }
 
   .home-navigation a {
-    padding-inline: 0.55rem;
-    font-size: 0.8125rem;
+    padding-inline: 0.4rem;
+    font-size: 0.75rem;
   }
 
   .home-navigation-arrow {

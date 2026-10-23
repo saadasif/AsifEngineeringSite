@@ -10,12 +10,14 @@ const pages = [
   { file: "index.html", image: "home.png" },
   { file: "reading.html", image: "reading.png" },
   { file: "readme.html", image: "readme.png" },
+  { file: "watches.html", image: "watches.png" },
 ];
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".svg": "image/svg+xml",
   ".png": "image/png",
+  ".webp": "image/webp",
 };
 
 // Serve the working tree, so previews include changes that aren't deployed yet.
@@ -57,8 +59,11 @@ try {
     const response = await page.goto(`${origin}/${file}`, { waitUntil: "networkidle" });
     if (!response.ok()) throw new Error(`Could not load ${file}: ${response.status()}`);
     await page.evaluate(async () => {
+      document.documentElement.setAttribute("data-link-preview", "");
+      const images = [...document.images];
+      for (const image of images) image.loading = "eager";
       await document.fonts.ready;
-      await Promise.all([...document.images].map(image => image.decode()));
+      await Promise.all(images.map(image => image.decode()));
     });
     await page.screenshot({
       path: resolve(temporary, image),

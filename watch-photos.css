@@ -1,0 +1,178 @@
+/* The images contain their own transparency. Only size and the rear thread
+   attachment vary per watch; no browser masks or blending are needed. */
+
+.watch--dietrich-ot3 {
+  --photo-ratio: 0.72789;
+  --tie-dx: -0.12585;
+  --tie-dy: 0.35782;
+  --photo-height: 368.06px;
+  --photo-width-limit: 117.47cqw;
+}
+
+/* Keep the source's original transparent canvas. Frame it in CSS. */
+.watch--serica-5303 {
+  --photo-ratio: 0.71429;
+  --tie-dx: -0.03571;
+  --tie-dy: 0.33000;
+  --photo-height: 455px;
+  --photo-width-limit: 149cqw;
+}
+
+.watch--ochs-settimana {
+  --photo-ratio: 0.95405;
+  --tie-dx: -0.13824;
+  --tie-dy: 0.39564;
+  --photo-height: 332.85px;
+  --photo-width-limit: 146.36cqw;
+}
+
+.watch--ming-twilight {
+  --photo-ratio: 0.74879;
+  --tie-dx: -0.11284;
+  --tie-dy: 0.37302;
+  --photo-height: 353.94px;
+  --photo-width-limit: 130.83cqw;
+}
+
+.watch--ming-bluefin {
+  --photo-ratio: 0.91387;
+  --tie-dx: -0.13072;
+  --tie-dy: 0.37348;
+  --photo-height: 356.35px;
+  --photo-width-limit: 141.06cqw;
+}
+
+.watch--ming-minimalist {
+  --photo-ratio: 0.74879;
+  --tie-dx: -0.10939;
+  --tie-dy: 0.36888;
+  --photo-height: 357.91px;
+  --photo-width-limit: 133.81cqw;
+}
+
+.watch--sinn-903 {
+  --photo-ratio: 0.62009;
+  --tie-dx: -0.04961;
+  --tie-dy: 0.36000;
+  --photo-height: 340px;
+}
+
+.watch--sinn-140 {
+  --photo-ratio: 0.68295;
+  --tie-dx: -0.05464;
+  --tie-dy: 0.36000;
+  --photo-height: 340px;
+}
+
+.watch--sinn-u50 {
+  --photo-ratio: 0.61681;
+  --tie-dx: -0.04934;
+  --tie-dy: 0.36000;
+  --photo-height: 340px;
+}
+
+.watch--echo-1956 {
+  --photo-ratio: 0.58442;
+  --tie-dx: -0.04675;
+  --tie-dy: 0.36000;
+}
+
+.watch--unimatic-uc3 {
+  --photo-ratio: 0.59409;
+  --tie-dx: -0.04753;
+  --tie-dy: 0.36000;
+}
+
+.watch--wmt-sanford {
+  --photo-ratio: 0.66667;
+  --tie-dx: -0.12630;
+  --tie-dy: 0.37109;
+  --photo-height: 358.22px;
+  --photo-width-limit: 107.54cqw;
+}
+
+.watch--wmt-panton {
+  --photo-ratio: 0.75000;
+  --tie-dx: -0.11326;
+  --tie-dy: 0.38536;
+  --photo-height: 344.02px;
+  --photo-width-limit: 119.37cqw;
+}
+
+.watch--wmt-montana {
+  --photo-ratio: 0.91387;
+  --tie-dx: -0.15282;
+  --tie-dy: 0.39024;
+  --photo-height: 336.67px;
+  --photo-width-limit: 126.79cqw;
+}
+
+.watch--wmt-gp1 {
+  --photo-ratio: 0.75000;
+  --tie-dx: -0.14019;
+  --tie-dy: 0.39019;
+  --photo-height: 337.22px;
+  --photo-width-limit: 110.40cqw;
+}
+
+.watch--wmt-cabochon {
+  --photo-ratio: 0.75000;
+  --tie-dx: -0.13191;
+  --tie-dy: 0.38191;
+  --photo-height: 349.55px;
+  --photo-width-limit: 120.38cqw;
+}
+
+.watch--wmt-royal {
+  --photo-ratio: 0.74948;
+  --tie-dx: -0.13389;
+  --tie-dy: 0.38889;
+  --photo-height: 340.33px;
+  --photo-width-limit: 108.25cqw;
+}
+
+.watch--steinhart-vintage-red {
+  --photo-ratio: 1.00000;
+  --tie-dx: -0.10333;
+  --tie-dy: 0.32750;
+  --photo-height: 402.44px;
+  --photo-width-limit: 178.06cqw;
+}
+
+.watch--nomos-autobahn {
+  --photo-ratio: 0.65584;
+  --tie-dx: -0.05246;
+  --tie-dy: 0.36000;
+}
+
+.watch--doxa-carbon {
+  --photo-ratio: 0.91679;
+  --tie-dx: -0.02863;
+  --tie-dy: 0.28168;
+  --photo-height: 383.24px;
+  --photo-width-limit: 170.51cqw;
+}
+
+.watch--kurono-hisui {
+  --photo-ratio: 0.75000;
+  --tie-dx: -0.11533;
+  --tie-dy: 0.37431;
+  --photo-height: 353.17px;
+  --photo-width-limit: 125.20cqw;
+}
+
+.watch--kurono-toki {
+  --photo-ratio: 0.92485;
+  --tie-dx: -0.13650;
+  --tie-dy: 0.37653;
+  --photo-height: 348.44px;
+  --photo-width-limit: 145.80cqw;
+}
+
+.watch--autodromo-groupc {
+  --photo-ratio: 1.00000;
+  --tie-dx: -0.14514;
+  --tie-dy: 0.37241;
+  --photo-height: 354.30px;
+  --photo-width-limit: 145.85cqw;
+}
