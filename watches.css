@@ -1,0 +1,350 @@
+/* Shared palette, fonts, reset and page chrome live in shared.css. */
+.time-study {
+  background-image:
+    linear-gradient(rgb(140 159 130 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(140 159 130 / 0.045) 1px, transparent 1px),
+    linear-gradient(rgb(140 159 130 / 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(140 159 130 / 0.015) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+}
+
+.time-container {
+  width: min(1440px, calc(100% - 80px));
+  margin-inline: auto;
+}
+
+.time-header {
+  padding-top: 28px;
+}
+
+.time-header .reading-topline {
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.time-header h1 {
+  margin: 27px 0 0;
+  font-family: var(--reading-literary);
+  font-size: clamp(54px, 6vw, 80px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.time-header h1 em {
+  display: inline-block;
+  color: var(--color-sage);
+  font-weight: 400;
+}
+
+/* Keep readable columns, with a small stagger of each complete watch/tag
+   assembly so the board feels collected rather than mechanically aligned. */
+.watch-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 58px 20px;
+  margin: 0;
+  padding: 35px 8px 40px;
+  list-style: none;
+  overflow: clip;
+  overflow-clip-margin: 28px;
+}
+
+.watch {
+  --figure-height: 350px;
+  --photo-height: 330px;
+  --photo-width-limit: 92cqw;
+  --photo-scale: 1;
+  --placement-y: 0px;
+  --tag-width: 184px;
+  --eyelet-offset-x: 15px;
+  --eyelet-offset-y: 17px;
+  --tag-left: var(--desktop-tag-left);
+  --tag-top: calc(var(--figure-height) + 18px);
+  --tag-angle: 3deg;
+  position: relative;
+  min-width: 0;
+}
+
+.watch:nth-child(3n + 2) {
+  --tag-angle: -9deg;
+}
+
+.watch:nth-child(3n) {
+  --tag-angle: 7deg;
+}
+
+.watch-link {
+  /* Image and string use one container and one sizing calculation. */
+  --image-height: min(calc(var(--photo-height) * var(--photo-scale)), var(--photo-width-limit) / var(--photo-ratio));
+  --tie-x: calc(50% + var(--image-height) * var(--tie-dx));
+  --tie-y: calc(var(--figure-height) / 2 + var(--image-height) * var(--tie-dy));
+  --tag-position-left: min(var(--tag-left), calc(var(--tie-x) - 28px));
+  --eyelet-x: calc(var(--tag-position-left) + var(--eyelet-offset-x));
+  --eyelet-y: calc(var(--tag-top) + var(--eyelet-offset-y));
+  container-type: inline-size;
+  position: relative;
+  display: block;
+  top: var(--placement-y);
+  width: 100%;
+  height: calc(var(--figure-height) + 140px);
+  color: inherit;
+  text-decoration: none;
+  transform: rotate(var(--tilt));
+  transform-origin: 50% 42%;
+  transition: translate 180ms ease;
+}
+
+.watch-figure {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: var(--figure-height);
+}
+
+.watch-image {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(7px 13px 7px rgb(0 0 0 / 0.55));
+}
+
+.watch-image img {
+  display: block;
+  flex-shrink: 0;
+  width: auto;
+  height: var(--image-height);
+}
+
+/* One string paints above the tag and behind the watch. The eyelet is also
+   the tag's rotation origin, so the endpoint stays attached when it rotates. */
+.watch-thread {
+  position: absolute;
+  z-index: 2;
+  left: var(--eyelet-x);
+  top: var(--tie-y);
+  width: calc(var(--tie-x) - var(--eyelet-x));
+  height: calc(var(--eyelet-y) - var(--tie-y));
+  overflow: visible;
+  pointer-events: none;
+}
+
+.watch-thread path {
+  fill: none;
+  stroke: #aa9d80;
+  stroke-width: 2;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.watch-tag {
+  position: absolute;
+  z-index: 1;
+  top: var(--tag-top);
+  left: var(--tag-position-left);
+  display: flex;
+  flex-direction: column;
+  width: var(--tag-width);
+  min-height: 94px;
+  padding: 10px 12px 10px 26px;
+  border: 1px solid rgb(239 231 220 / 0.6);
+  border-radius: 2px 5px 4px 2px;
+  background:
+    repeating-linear-gradient(3deg, transparent 0 3px, rgb(18 18 18 / 0.016) 3px 4px),
+    linear-gradient(110deg, var(--color-paper), #ded4c3);
+  box-shadow: 2px 4px 6px rgb(0 0 0 / 0.3);
+  color: var(--color-charcoal);
+  font-family: var(--reading-mono);
+  transform: rotate(var(--tag-angle));
+  transform-origin: var(--eyelet-offset-x) var(--eyelet-offset-y);
+}
+
+.watch-tag::before {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #a5946e;
+  border-radius: 50%;
+  background: var(--color-charcoal);
+  box-shadow: 0 0 0 1px rgb(18 18 18 / 0.12), inset 0 1px 2px #000;
+  content: "";
+}
+.tag-brand {
+  padding-right: 9px;
+  color: #57644f;
+  font-size: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag-name {
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.tag-specs {
+  display: grid;
+  gap: 2px;
+  margin-top: 7px;
+  font-size: 9.5px;
+  line-height: 1.6;
+}
+
+.tag-specs span span[aria-hidden] {
+  margin-inline: 1px;
+  color: #6d705f;
+}
+
+.tag-arrow {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  color: #68765f;
+  font-size: 12px;
+}
+
+.watch-link:focus-visible {
+  border-radius: 4px;
+}
+
+@media (hover: hover) {
+  .watch-link:hover {
+    translate: 0 -5px;
+  }
+}
+
+.time-study .reading-footer {
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .time-container {
+    width: calc(100% - 64px);
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 961px) {
+  .watch-board {
+    column-gap: 8px;
+  }
+
+  .watch {
+    --tag-width: 176px;
+    --tag-left: 8px;
+  }
+
+  .watch-link {
+    transform: rotate(calc(var(--tilt) * 0.5));
+  }
+}
+
+@media (max-width: 960px) {
+  .watch-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 36px;
+    row-gap: 58px;
+    padding-top: 38px;
+  }
+
+  .watch {
+    --tag-left: 14px;
+  }
+
+}
+
+@media (min-width: 541px) {
+  .watch:nth-child(6n + 2) {
+    --placement-y: 24px;
+    --photo-scale: 0.96;
+  }
+
+  .watch:nth-child(6n + 3) {
+    --placement-y: 10px;
+    --photo-scale: 1.035;
+  }
+
+  .watch:nth-child(6n + 5) {
+    --placement-y: 34px;
+    --photo-scale: 0.94;
+  }
+}
+
+@media (max-width: 540px) {
+  .time-container {
+    width: calc(100% - 40px);
+  }
+
+  .time-header {
+    padding-top: 24px;
+  }
+
+  .time-header .reading-topline {
+    padding-bottom: 18px;
+  }
+
+  .time-header h1 {
+    max-width: 9ch;
+    margin-top: 27px;
+    font-size: clamp(52px, 12vw, 64px);
+    line-height: 1;
+  }
+
+  .watch-board {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 20px;
+    padding: 32px 14px 15px;
+    overflow-clip-margin: 16px;
+  }
+
+  .watch {
+    width: min(100%, 340px);
+    margin: 0 auto;
+    --tag-width: 192px;
+    --tag-left: 14px;
+  }
+
+  .watch:nth-child(even) {
+    --tag-left: max(14px, calc(100% - 208px));
+  }
+
+  .tag-brand {
+    font-size: 9px;
+  }
+
+  .tag-specs {
+    font-size: 10px;
+  }
+}
+
+/* Only the screenshot generator enables this mode. Keep all first-row tags
+   inside its 1200 × 630 frame without changing the public page layout. */
+html[data-link-preview] .watch {
+  --figure-height: 260px;
+  --photo-scale: 0.72;
+  --placement-y: 0px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .watch-link {
+    transition: none;
+  }
+}
