@@ -19,7 +19,9 @@ pushing, and use a normal push without force-pushing.
   from the owner's personal reflection; do not rewrite it unless requested.
 - The watch moodboard uses `watches.html` and `watches.css`. Per-image case
   calibration and thread anchors belong in `watch-photos.css`.
-- These three secondary pages are AI-generated design playgrounds. Preserve
+- The Canadian community guide uses `next-place.html`, `next-place.css` and
+  `assets/places/`. Keep it direct-link only with `noindex`.
+- These secondary pages are AI-generated design playgrounds. Preserve
   that distinction from the owner-authored writing on the personal readme.
 
 ## Watch images and measurements

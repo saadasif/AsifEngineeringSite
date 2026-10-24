@@ -6,6 +6,10 @@
   --color-clay: #d0433e;
   --color-muted: #b1b5a9;
   --color-rule: #30372f;
+  --color-forest: #263e31;
+  --color-terracotta: #a34831;
+  --color-olive: #63705d;
+  --color-paper-rule: #c9c8b7;
 }
 
 html {
@@ -71,6 +75,30 @@ body {
   color: var(--color-paper);
   font-family: "DM Sans", Arial, sans-serif;
   font-weight: 400;
+}
+
+/* A light-paper palette for the Canadian field guide; shared chrome inherits it. */
+.place-guide {
+  --guide-serif: Georgia, "Times New Roman", serif;
+  --color-muted: var(--color-olive);
+  --color-rule: var(--color-paper-rule);
+  --color-clay: var(--color-terracotta);
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+}
+
+.place-guide .reading-home-link:hover {
+  color: var(--color-forest);
+}
+
+.reading-room.place-guide a:focus-visible {
+  outline-color: var(--color-terracotta);
+}
+
+.place-guide .reading-skip,
+.reading-room.place-guide ::selection {
+  background: var(--color-forest);
+  color: var(--color-paper);
 }
 
 .reading-room *,

@@ -1,0 +1,607 @@
+/* Editorial layout and pen illustrations; palette, fonts and chrome are shared. */
+.place-guide {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.place-guide a {
+  color: inherit;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.place-guide a:hover {
+  color: var(--color-terracotta);
+}
+
+.guide-container {
+  width: min(1200px, calc(100% - 96px));
+  margin-inline: auto;
+}
+
+.guide-header .reading-topline {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.guide-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+  padding-block: 40px 24px;
+}
+
+.guide-header h1 {
+  margin: 0 0 24px;
+  font-family: var(--reading-display);
+  font-size: clamp(56px, 5.8vw, 84px);
+  font-weight: 750;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+}
+
+.guide-subtitle {
+  max-width: 34ch;
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.guide-header time {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.guide-opening-sketch {
+  display: block;
+  width: 180px;
+  height: 90px;
+  margin-top: 20px;
+  color: var(--color-forest);
+}
+
+.guide-hero-photo,
+.place-photo {
+  margin: 0;
+}
+
+.guide-hero-photo img,
+.place-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.guide-hero-photo {
+  width: 100%;
+  max-width: 410px;
+  justify-self: end;
+}
+
+.guide-hero-photo figcaption,
+.place-photo figcaption {
+  margin-top: 8px;
+  color: var(--color-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.guide-hero-photo figcaption a,
+.place-photo figcaption a {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.guide-contents {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  font-size: 13px;
+}
+
+.guide-shortlist,
+.guide-takeaways,
+.guide-essay {
+  padding-block: 48px;
+  scroll-margin-top: 24px;
+}
+
+.guide-shortlist h2,
+.place-heading h2,
+.guide-takeaways h2,
+.guide-essay h2 {
+  margin: 0 0 20px;
+  font-family: var(--guide-serif);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.shortlist-note {
+  max-width: 78ch;
+  margin: 0 0 24px;
+  font-size: 14px;
+}
+
+.shortlist-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shortlist-list li {
+  border-top: 1px solid var(--color-rule);
+}
+
+.shortlist-list a {
+  display: grid;
+  grid-template-columns: 22px minmax(180px, 0.8fr) minmax(0, 1.5fr);
+  align-items: baseline;
+  gap: 16px;
+  padding-block: 14px;
+  text-decoration: none;
+}
+
+.shortlist-rank {
+  color: var(--color-terracotta);
+  font-size: 12px;
+}
+
+.shortlist-town {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.shortlist-list a:hover .shortlist-town {
+  text-decoration: underline;
+}
+
+.shortlist-why {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.place-chapter {
+  padding-block: 56px 40px;
+  border-top: 1px solid var(--color-rule);
+  scroll-margin-top: 24px;
+}
+
+.place-heading-row {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 56px;
+  margin-bottom: 36px;
+}
+
+.place-heading .guide-label {
+  margin: 0 0 14px;
+  color: var(--color-terracotta);
+  font-size: 13px;
+}
+
+.place-rank::after {
+  content: " ·";
+}
+
+.place-heading h2 {
+  margin-bottom: 16px;
+  font-size: clamp(44px, 4.5vw, 66px);
+}
+
+.place-deck {
+  max-width: 36ch;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.place-sketch {
+  display: block;
+  width: var(--sketch-size, 164px);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  color: var(--color-forest);
+  transform: rotate(var(--sketch-angle, 0deg));
+}
+
+/* Drawings follow the subject in the story, with room around their ink. */
+.sketch-inset {
+  float: right;
+  max-width: 42%;
+  margin: 12px -10px 16px 22px;
+}
+
+.sketch-inset--left {
+  float: left;
+  margin: 8px 24px 14px -6px;
+}
+
+.sketch-between-paragraphs {
+  margin: 24px 0 26px -8px;
+}
+
+.sketch-between-paragraphs--right {
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.sketch-by-photo {
+  margin: 20px 0 -4px 26px;
+}
+
+.sketch-by-photo--right {
+  margin-left: auto;
+  margin-right: 18px;
+}
+
+.sketch-after-facts {
+  margin: 42px 0 8px 18px;
+}
+
+.sketch-after-facts--right {
+  margin-left: auto;
+  margin-right: 26px;
+}
+
+.place-chapter--reverse .place-heading {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.place-chapter--reverse .place-photo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.place-chapter--inset .place-photo {
+  width: 84%;
+  justify-self: end;
+}
+
+.place-chapter--wide .place-heading-row {
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.place-chapter--wide .place-photo img {
+  aspect-ratio: 2.7;
+  object-fit: cover;
+}
+
+.place-sketch--terracotta {
+  color: var(--color-terracotta);
+}
+
+.place-reading-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: start;
+  gap: 64px;
+}
+
+.place-prose {
+  display: flow-root;
+}
+
+.place-prose p,
+.guide-essay-copy p {
+  margin: 0 0 20px;
+}
+
+.place-facts table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.place-facts caption {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-rule);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.place-facts th,
+.place-facts td {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+.place-facts th {
+  width: 28%;
+  padding-right: 18px;
+  font-weight: 600;
+}
+
+.place-compromise {
+  clear: both;
+  margin-top: 28px;
+}
+
+.place-compromise h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.place-compromise p {
+  margin-bottom: 0;
+}
+
+.guide-back {
+  display: inline-block;
+  margin-top: 26px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.guide-takeaways,
+.guide-essay {
+  border-top: 1px solid var(--color-rule);
+}
+
+.guide-takeaways {
+  position: relative;
+  padding-right: 240px;
+}
+
+.guide-summary-sketch {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 190px;
+  height: 150px;
+  color: var(--color-terracotta);
+}
+
+.takeaway-grid {
+  max-width: 76ch;
+}
+
+.takeaway-grid > div {
+  margin-top: 24px;
+}
+
+.takeaway-grid h3 {
+  display: inline;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.takeaway-grid h3::after {
+  content: ": ";
+}
+
+.takeaway-grid > div > a {
+  font-size: 15px;
+}
+
+.takeaway-grid p {
+  margin: 5px 0 0;
+}
+
+.guide-essay-copy,
+.guide-closing {
+  max-width: 76ch;
+}
+
+.guide-ending-sketch {
+  display: block;
+  width: 200px;
+  height: 132px;
+  margin: 32px 0 20px;
+  color: var(--color-forest);
+}
+
+.guide-closing {
+  margin: 0;
+  font-family: var(--guide-serif);
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.guide-photo-credits {
+  padding-top: 24px;
+  border-top: 1px solid var(--color-rule);
+  color: var(--color-muted);
+  font-size: 11px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.guide-photo-credits h2 {
+  margin: 0;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.guide-photo-credits ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 32px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-photo-credits li {
+  scroll-margin-top: 24px;
+}
+
+.guide-photo-credits li:target {
+  outline: 1px solid var(--color-terracotta);
+  outline-offset: 6px;
+}
+
+.guide-footer {
+  margin-top: 32px;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .guide-container {
+    width: calc(100% - 48px);
+  }
+
+  .guide-hero {
+    gap: 28px;
+  }
+
+  .guide-header h1 {
+    font-size: 6vw;
+  }
+
+  .place-heading-row {
+    gap: 32px;
+  }
+
+  .place-reading-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .place-prose {
+    max-width: 76ch;
+  }
+
+  .guide-takeaways {
+    padding-right: 180px;
+  }
+
+  .guide-summary-sketch {
+    width: 150px;
+  }
+}
+
+@media (max-width: 640px) {
+  .guide-container {
+    width: calc(100% - 36px);
+  }
+
+  .guide-hero,
+  .place-heading-row {
+    display: block;
+  }
+
+  .guide-hero {
+    padding-top: 28px;
+  }
+
+  .guide-header h1 {
+    margin: 0 0 22px;
+    font-size: clamp(43px, 10.8vw, 68px);
+  }
+
+  .guide-subtitle {
+    max-width: 26ch;
+  }
+
+  .guide-opening-sketch {
+    width: 150px;
+    height: 80px;
+    margin: 16px 0 22px auto;
+  }
+
+  .guide-hero-photo {
+    width: 86%;
+    margin-left: auto;
+  }
+
+  .guide-contents {
+    flex-direction: row;
+    gap: 10px 22px;
+    font-size: 12px;
+  }
+
+  .shortlist-list a {
+    grid-template-columns: 22px 1fr;
+    gap: 3px 10px;
+  }
+
+  .shortlist-why {
+    grid-column: 2;
+  }
+
+  .guide-shortlist,
+  .guide-takeaways,
+  .guide-essay,
+  .place-chapter {
+    padding-block: 36px;
+  }
+
+  .guide-shortlist h2,
+  .guide-takeaways h2,
+  .guide-essay h2 {
+    font-size: 33px;
+  }
+
+  .place-heading h2 {
+    font-size: 44px;
+  }
+
+  .place-photo {
+    margin-top: 24px;
+  }
+
+  .sketch-after-facts {
+    max-width: 62%;
+    margin-top: 28px;
+  }
+
+  .sketch-by-photo {
+    max-width: 48%;
+  }
+
+  .place-chapter--inset .place-photo {
+    width: 90%;
+    margin-left: auto;
+  }
+
+  .place-chapter--wide .place-photo img {
+    aspect-ratio: 1.7;
+  }
+
+  .guide-takeaways {
+    padding-right: 0;
+  }
+
+  .guide-summary-sketch {
+    position: static;
+    display: block;
+    width: 140px;
+    height: 100px;
+    margin: 20px 0 20px auto;
+  }
+
+  .guide-photo-credits ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Preview framing is used by the workflow only after the page reaches main. */
+[data-link-preview] .guide-header {
+  padding-top: 22px;
+}
+
+[data-link-preview] .guide-hero {
+  padding-block: 22px 14px;
+}
+
+[data-link-preview] .guide-header h1 {
+  font-size: 70px;
+}
+
+[data-link-preview] .guide-opening-sketch {
+  height: 70px;
+}

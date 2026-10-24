@@ -11,6 +11,7 @@ const pages = [
   { file: "reading.html", image: "reading.png" },
   { file: "readme.html", image: "readme.png" },
   { file: "watches.html", image: "watches.png" },
+  { file: "next-place.html", image: "next-place.png" },
 ];
 const types = {
   ".html": "text/html; charset=utf-8",
