@@ -107,6 +107,7 @@
   scroll-margin-top: 24px;
 }
 
+.guide-criteria h2,
 .guide-shortlist h2,
 .place-heading h2,
 .guide-takeaways h2,
@@ -117,6 +118,26 @@
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.035em;
+}
+
+.guide-criteria {
+  padding-top: 48px;
+  scroll-margin-top: 24px;
+}
+
+.guide-criteria ul {
+  columns: 2;
+  column-gap: 48px;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.guide-criteria li {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  padding-left: 3px;
 }
 
 .shortlist-note {
@@ -524,6 +545,14 @@
     font-size: 12px;
   }
 
+  .guide-criteria {
+    padding-top: 36px;
+  }
+
+  .guide-criteria ul {
+    columns: 1;
+  }
+
   .shortlist-list a {
     grid-template-columns: 22px 1fr;
     gap: 3px 10px;
@@ -540,6 +569,7 @@
     padding-block: 36px;
   }
 
+  .guide-criteria h2,
   .guide-shortlist h2,
   .guide-takeaways h2,
   .guide-essay h2 {
