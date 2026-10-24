@@ -1,5 +1,13 @@
 # OS generated files
 **/.DS_Store
+
+# Installed dependencies and local research, prompts, screenshots and backups
 node_modules/
 .context/
+
+# Legacy authoring records; keep current copies in .context/watch-authoring/
+/assets/watches/IMAGE_EDITS.md
+/assets/watches/SOURCES.md
+
+# Temporary link-preview generation files
 assets/previews/.generate-*/

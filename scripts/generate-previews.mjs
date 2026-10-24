@@ -17,7 +17,6 @@ const types = {
   ".css": "text/css; charset=utf-8",
   ".svg": "image/svg+xml",
   ".png": "image/png",
-  ".webp": "image/webp",
 };
 
 // Serve the working tree, so previews include changes that aren't deployed yet.
