@@ -298,6 +298,14 @@
   color: var(--color-terracotta);
 }
 
+.place-sketch--olive {
+  color: var(--color-olive);
+}
+
+.place-sketch--charcoal {
+  color: var(--color-charcoal);
+}
+
 .place-reading-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;

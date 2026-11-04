@@ -72,4 +72,13 @@
       <path d="m60 65 5 6 8-9m-18 34 10 7 13-11m-15 28 4 3 6-4m69-34 6 6 6-7m-17 29 12 6 11-8M11 147c68-5 138-5 219 0m-188 8 42-1m41-1 38 1"/>
     </g>
   </symbol>
+  <!-- Montréal: a walk-up façade and its outdoor staircase. -->
+  <symbol id="montreal-staircase" viewBox="108 10 124 146">
+    <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M130 137V18l91 1v119M125 18l101 1M143 137V97h24v40m-18-18h2M147 31h21v34h-21Zm10 1v32m-10-17h21M184 30h23v35h-23Zm11 1v33m-11-17h23"/>
+      <path d="M176 75h47m-47-10h47m-45 0v10m11-10v10m11-10v10m11-10v10m11-10v10M178 75c-1 17-14 27-30 36-13 7-22 17-23 28M190 76c-2 22-17 34-33 43-11 6-18 12-20 20"/>
+      <path d="M166 91l12 4m-21 5 12 5m-22 1 12 7m-22 0 11 8m-20-1 11 8m-16-1 12 8M173 65c0 23-15 35-31 44-12 7-23 18-25 30m56-74v-9m-1 17 6 3m-11 9 7 4m-16 8 7 5m-19 2 7 6m-20 3 7 6m-18 5 8 5"/>
+      <path d="M116 145c39-2 73-2 109 0M137 26l3 1m75 54h5m-83 4h7m27 44h7m-42-6h5M112 34l7-4 7 4"/>
+    </g>
+  </symbol>
 </svg>
